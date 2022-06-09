@@ -3,15 +3,19 @@ on: [push]
 jobs:
   example_matrix:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         node: ["-a","asd"]
         include:
           - continue: false
+          - sleep: 1
+          - node: "-a"
+            sleep: 20
     continue-on-error: ${{ matrix.continue }}        
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
     steps:
+      - run: sleep ${{matrix.sleep}}
       - run: mkdir ${{matrix.node}}
 
 
