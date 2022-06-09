@@ -1,7 +1,10 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  example_matrix:
+    strategy:
+      matrix:
+        node: ["","-asd"]
+    runs-on: ${{ matrix.os }}
     steps:
-      - run: echo ${{github.ref_name}}
+      - run: echo hola${{matrix.node}}
