@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: false
     steps:
+      - run: sleep 20
       - run: mkdir ${{matrix.node}}
