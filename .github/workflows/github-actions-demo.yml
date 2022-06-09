@@ -4,4 +4,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{github.action}}
+      - run: echo ${{github.ref_name}}
