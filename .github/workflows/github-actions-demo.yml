@@ -6,10 +6,20 @@ jobs:
       fail-fast: false
       matrix:
         node: ["-a","asd"]
+        include:
+          - continue: false
+          -  node: "-a"
+             continue: true 
+    continue-on-error: ${{ matrix.continue }}        
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
     steps:
       - run: mkdir ${{matrix.node}}
+
+
+
+
+
   j2:
     needs: example_matrix
     runs-on: ubuntu-latest
