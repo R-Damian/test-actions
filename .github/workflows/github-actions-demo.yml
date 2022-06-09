@@ -8,8 +8,6 @@ jobs:
         node: ["-a","asd"]
         include:
           - continue: false
-          -  node: "-a"
-             continue: true 
     continue-on-error: ${{ matrix.continue }}        
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
