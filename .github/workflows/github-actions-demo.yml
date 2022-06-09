@@ -1,14 +1,17 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-
-
   example_matrix:
     strategy:
       fail-fast: false
       matrix:
         node: ["-a","asd"]
     runs-on: ubuntu-latest
-    continue-on-error: false
+    name: en nodo ${{matrix.node}}
     steps:
       - run: mkdir ${{matrix.node}}
+  j2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo asd
+
