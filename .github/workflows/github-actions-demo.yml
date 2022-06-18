@@ -15,14 +15,3 @@ jobs:
     name: en nodo ${{matrix.node}}
     steps:
       - run: echo ${{matrix.node}}
-
-
-
-
-
-  j2:
-    needs: example_matrix
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo asd
-
