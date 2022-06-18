@@ -8,26 +8,10 @@ on:
 jobs:
   example_matrix:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
-        node: ["-a","asd"]
-        include:
-          - sleep: 1
-          - node: "asd"
-            sleep: 20
+        node: ["a","n"]
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
     steps:
-      - run: sleep ${{matrix.sleep}}
-      - run: mkdir ${{matrix.node}}
-
-
-
-
-
-  j2:
-    needs: example_matrix
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo asd
-
+      - run: echo ${{matrix.node}}
