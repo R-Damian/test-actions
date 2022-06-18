@@ -10,16 +10,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        node: ["-a","asd"]
-        include:
-          - sleep: 1
-          - node: "asd"
-            sleep: 20
+        node: ["a","n"]
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
     steps:
-      - run: sleep ${{matrix.sleep}}
-      - run: mkdir ${{matrix.node}}
+      - run: echo ${{matrix.node}}
 
 
 
