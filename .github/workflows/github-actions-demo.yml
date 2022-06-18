@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: ["a","n"]
+        node: ["a","55"]
     runs-on: ubuntu-latest
     name: en nodo ${{matrix.node}}
     steps:
