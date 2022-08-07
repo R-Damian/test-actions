@@ -7,7 +7,7 @@ on:
   
 jobs:
   example_matrix:
-    runs-on: ["self-hosted"]
+    runs-on: ["self-hosted","Linux"]
     container: ubuntu
     steps:
       - run: echo $env:USERNAME
