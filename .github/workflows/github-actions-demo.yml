@@ -7,7 +7,6 @@ on:
   
 jobs:
   example_matrix:
-    runs-on: ["self-hosted","Linux"]
-    container: ubuntu
+    runs-on: ["self-hosted"]
     steps:
-      - run: sleep 10
+      - run: mkdir c:\a
