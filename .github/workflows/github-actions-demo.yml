@@ -10,4 +10,4 @@ jobs:
     runs-on: ["self-hosted","Linux"]
     container: ubuntu
     steps:
-      - run: echo $env:USERNAME
+      - run: sleep 10
