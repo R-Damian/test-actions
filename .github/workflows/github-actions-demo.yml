@@ -9,5 +9,5 @@ jobs:
   example_matrix:
     runs-on: ["self-hosted"]
     steps:
-      - run: echo mkdir D:\prueba-action
-      - run: echo mkdir c:\prueba-action
+      - run: mkdir D:\prueba-action
+      - run: mkdir c:\prueba-action
