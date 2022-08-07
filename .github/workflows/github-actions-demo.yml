@@ -7,11 +7,7 @@ on:
   
 jobs:
   example_matrix:
-    strategy:
-      fail-fast: false
-      matrix:
-        node: ["a","55"]
-    runs-on: ubuntu-latest
-    name: en nodo ${{matrix.node}}
+    runs-on: ["self-hosted"]
     steps:
-      - run: echo ${{matrix.node}}
+      - run: echo mkdir D:\prueba-action
+      - run: echo mkdir c:\prueba-action
