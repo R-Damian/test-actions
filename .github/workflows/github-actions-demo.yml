@@ -9,5 +9,4 @@ jobs:
   example_matrix:
     runs-on: ["self-hosted"]
     steps:
-      - run: mkdir D:\prueba-action
-      - run: mkdir c:\prueba-action
+      - run: echo $env:USERNAME
